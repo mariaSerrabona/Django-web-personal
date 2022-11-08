@@ -1,14 +1,31 @@
-% extends 'core/base.html' %}
+{% extends 'core/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+<body>
+    {% block title %}Contacto{% endblock %}
 
-{% block title %}Contacto{% endblock %}
 
+    {% block content %}
+    <h2> Contacto </h2>
+    <p> Aquí os dejo mi email y mis redes sociales: </p>
+    <ul>
+        <li> <a href='mailto:mperezse@myuax.com'>Email</a></li>
+        <li><a href='https://github.com/mariaSerrabona'>GitHub</a></li>
+        <li><a href='https://youtube.com'>Youtube</a></li>
+    </ul>
+    {% endblock content %}
 
-{% block content %}
-<h2> Contacto </h2>
-<p> Aquí os dejo mi email y mis redes sociales: </p>
-<ul>
-    <li> <a href='mailto:mperezse@myuax.com'>Email</a></li>
-    <li><a href='https://github.com/mariaSerrabona'>GitHub</a></li>
-    <li><a href='https://youtube.com'>Youtube</a></li>
-</ul>
-{% endblock content %}
+        <!-- jQuert y Bootstrap -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Scripts del template -->
+        <script src="js/clean-blog.min.js"></script>
+</body>
+</html>
