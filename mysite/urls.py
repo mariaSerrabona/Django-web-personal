@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from core import views
 
+#enlazamos cada elemento creado del views con uns url de la web
 urlpatterns = [
+    path('', views.home, name="home"),
+    path('about-me/', views.about, name="about"),
+    path('portfolio/', views.portfolio, name="portfolio"),
+    path('contact/', views.contact, name="contact"),
     path('admin/', admin.site.urls),
 ]
