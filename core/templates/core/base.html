@@ -20,22 +20,25 @@
 
 
 <body>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-            <a class="navbar-brand" href="{% url 'home' %}">María Pérez-Serrabona</a>
-            <li class="nav-item">
-                <a class="nav-link" href=''>Portada</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="about-me">Acerca de</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="portfolio">Portafolio</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="contact">Contacto</a>
-            </li>
-        </ul>
+    <div class="container">
+        {% block content %}{% endblock %}
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <a class="navbar-brand" href="{% url 'home' %}">María Pérez-Serrabona</a>
+                <li class="nav-item">
+                    <a class="nav-link" href=''>Portada</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about-me">Acerca de</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="portfolio">Portafolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact">Contacto</a>
+                </li>
+            </ul>
+        </div>
     </div>
 
     <!-- Cabecera -->
@@ -51,6 +54,12 @@
         </div>
     </div>
     </header>
+
+    <!-- Contenido -->
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+    {% if request.path != "/" %}<hr>{% endif %}
 
 
     <!-- Bootstrap y Javascripts -->
