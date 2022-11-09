@@ -1,7 +1,9 @@
 
-
 {% extends 'core/base.html' %}
-{% block content %}
-    <h2>Mi Web Personal</h2>
-    <p>Bienvenidos.</p>
+{% load static %}
+{% block title %}Portada{% endblock %}
+{% block background %}{% static 'core/img/home-bg.jpg' %}{% endblock %}
+{% block headers %}
+<h1>María Pérez-Serrabona</h1>
+<span class="subheading">Ingeniera Matemática</span>
 {% endblock %}
