@@ -8,47 +8,49 @@
     <title>María Pérez-Serrabona</title>
 
     <!-- Estilos y fuentes del template  -->
-    <link href="core/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="core/static/core/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/static/core/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/core/static/core/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href="core/css/clean-blog.min.css" rel="stylesheet">
+    <link href="/static/core/css/clean-blog.min.css" rel="stylesheet">
 </head>
 <body>
     {% load static %}
     {% block title %}Portafolio{% endblock %}
 
-    {% block background %}{% static 'core/static/core/img/portfolio-bg.jpg' %}{% endblock %}
+    {% block background %}{% static '/static/core/img/portfolio-bg.jpg' %}{% endblock %}
     {% block headers %}
     <h1>Portafolio</h1>
     <span class="subheading">Currículo</span>
     {% endblock %}
     {% block content %}
         <!-- Proyecto -->
-    <div class="row project">
-        <div class="col-lg-3 col-md-4 offset-lg-1">
-            <img class="img-fluid"
-                src="{% static 'core/img/about-bg.jpg' %}" alt="">
-        </div>
-        <div class="col-lg-7 col-md-8">
-            <h2 class="section-heading title">Segundo proyecto</h2>
-            <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a
-                the most beautiful you can imagine. That beautiful,</p>
-            <p><a href="http://google.com">Más información</a></p>
-        </div>
-    </div>
+
     <!-- Proyecto -->
     <div class="row project">
         <div class="col-lg-3 col-md-4 offset-lg-1">
             <img class="img-fluid"
-                src="{% static 'core/img/home-bg.jpg' %}" alt="">
+                src="{% static '/static/core/img/home-bg.jpg' %}" alt="">
         </div>
         <div class="col-lg-7 col-md-8">
             <h2 class="section-heading title">Primer proyecto</h2>
-            <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of amarble, warm....the most beautiful you can imagine. That beautiful,</p>
+            <p>Esta es la descripción de mi primer proyecto.</p>
             <p><a href="http://google.com">Más información</a></p>
         </div>
     </div>
+
+    <div class="row project">
+        <div class="col-lg-3 col-md-4 offset-lg-1">
+            <img class="img-fluid"
+                src="{% static '/static/core/img/about-bg.jpg' %}" alt="">
+        </div>
+        <div class="col-lg-7 col-md-8">
+            <h2 class="section-heading title">Segundo proyecto</h2>
+            <p>Esta es la descripción de mi segundo proyecto</p>
+            <p><a href="http://google.com">Más información</a></p>
+        </div>
+    </div>
+
     {% endblock %}
 
 
