@@ -41,19 +41,21 @@
         </div>
     </div>
 
+
     <!-- Cabecera -->
-    <header class="masthead"
-    style="background-image: url('{% block background %}{% endblock%}')">
-    <div class="overlay"></div>
+    <header class="masthead" style="background-image: url('/static/core/img/home-bg.jpg')">
+        <div class="overlay"></div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-md-10 mx-auto"> <div class="site-heading">
-                    {% block headers %}{% endblock %}
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                <h1>María Pérez</h1>
+                <span class="subheading">Ingeniero Matemática</span>
                 </div>
             </div>
+            </div>
         </div>
-    </div>
-    </header>
+        </header>
 
     <!-- Contenido -->
     <div class="container">
@@ -65,5 +67,43 @@
     <script src="/static/core/vendor/jquery/jquery.min.js"></script>
     <script src="/static/core/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="/static/core/js/clean-blog.min.js"></script>
+
+
+        <!-- Pié de página -->
+        <footer>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                  <ul class="list-inline text-center">
+                    <li class="list-inline-item">
+                      <a href="#">
+                        <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#">
+                        <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#">
+                        <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                  <p class="copyright text-muted">Copyright &copy; 2018 · María Pérez (Ingeniero Matematica) </p>
+                </div>
+              </div>
+            </div>
+          </footer>
 
 </html>
