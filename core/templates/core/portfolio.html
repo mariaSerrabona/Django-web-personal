@@ -8,17 +8,17 @@
     <title>María Pérez-Serrabona</title>
 
     <!-- Estilos y fuentes del template  -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="core/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="core/static/core/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href="/Users/mariaperez-serrabona/Django-web-personal/core/static/core/css" rel="stylesheet">
+    <link href="core/css/clean-blog.min.css" rel="stylesheet">
 </head>
 <body>
     {% load static %}
     {% block title %}Portafolio{% endblock %}
 
-    {% block background %}{% static 'core/img/portfolio-bg.jpg' %}{% endblock %}
+    {% block background %}{% static 'core/static/core/img/portfolio-bg.jpg' %}{% endblock %}
     {% block headers %}
     <h1>Portafolio</h1>
     <span class="subheading">Currículo</span>
@@ -41,7 +41,7 @@
     <div class="row project">
         <div class="col-lg-3 col-md-4 offset-lg-1">
             <img class="img-fluid"
-                src="{% static '/Users/mariaperez-serrabona/Django-web-personal/core/static/core/img/home-bg.jpg' %}" alt="">
+                src="{% static 'core/img/home-bg.jpg' %}" alt="">
         </div>
         <div class="col-lg-7 col-md-8">
             <h2 class="section-heading title">Primer proyecto</h2>
@@ -50,5 +50,27 @@
         </div>
     </div>
     {% endblock %}
+
+
+    <div class="container">
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <a class="navbar-brand" href="{% url 'home' %}">María Pérez-Serrabona</a>
+                <li class="nav-item">
+                    <a class="nav-link" href=''>Portada</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about-me">Acerca de</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="portfolio">Portafolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
