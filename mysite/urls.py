@@ -22,11 +22,11 @@ from django.conf import settings
 
 #enlazamos cada elemento creado del views con uns url de la web
 urlpatterns = [
-    path('', core_views.home, name="home"),
-    path('about-me/', core_views.about, name="about"),
-    path('portfolio/', core_views.portfolio, name="portfolio"),
-    path('contact/', core_views.contact, name="contact"),
-    path('admin/', admin.site.urls),
+    path('', core_views.home, name="home.html"),
+    path('about.html/', core_views.about, name="about.html"),
+    path('portfolio.html/', core_views.portfolio, name="portfolio.html"),
+    path('contact.html/', core_views.contact, name="contact.html"),
+    path('admin.html/', admin.site.urls),
 ]
 
 if settings.DEBUG:
